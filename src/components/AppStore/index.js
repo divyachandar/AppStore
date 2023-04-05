@@ -322,36 +322,38 @@ class AppStore extends Component {
     const filteredApps = this.getFilteredApps()
     return (
       <div className="app-container">
-        <h1 className="heading">App Store</h1>
-        <div className="search-input-container">
-          <input
-            type="search"
-            placeholder="Search Google"
-            value={searchInput}
-            onChange={this.onChangeInput}
-            className="input-search"
-          />
-          <img
-            src="https://assets.ccbp.in/frontend/react-js/app-store/app-store-search-img.png"
-            alt="search icon"
-            className="search-icon"
-          />
-        </div>
-        <ul className="tabs-container">
-          {tabsList.map(eachTab => (
-            <TabItem
-              key={eachTab.tabId}
-              updateTabId={this.updateTabId}
-              tabDetails={eachTab}
-              isActiveTab={eachTab.tabId === activeTabList}
+        <div className="app-store">
+          <h1 className="heading">App Store</h1>
+          <div className="search-input-container">
+            <input
+              type="search"
+              placeholder="Search"
+              value={searchInput}
+              onChange={this.onChangeInput}
+              className="input-search"
             />
-          ))}
-        </ul>
-        <ul className="app-list-container">
-          {filteredApps.map(appDetails => (
-            <AppItem key={appDetails.appId} appDetails={appDetails} />
-          ))}
-        </ul>
+            <img
+              src="https://assets.ccbp.in/frontend/react-js/app-store/app-store-search-img.png"
+              alt="search icon"
+              className="search-icon"
+            />
+          </div>
+          <ul className="tabs-container">
+            {tabsList.map(eachTab => (
+              <TabItem
+                key={eachTab.tabId}
+                updateTabId={this.updateTabId}
+                tabDetails={eachTab}
+                isActiveTab={eachTab.tabId === activeTabList}
+              />
+            ))}
+          </ul>
+          <ul className="app-list-container">
+            {filteredApps.map(appDetails => (
+              <AppItem key={appDetails.appId} appDetails={appDetails} />
+            ))}
+          </ul>
+        </div>
       </div>
     )
   }

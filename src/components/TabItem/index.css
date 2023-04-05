@@ -1,6 +1,6 @@
 /* Write your CSS here */
 .tab-item-container {
-  padding-right: 4px;
+  list-style-type: none;
 }
 @media screen and (min-width: 992px) {
   .tab-item-container {
@@ -8,21 +8,38 @@
   }
 }
 .tab-btn {
+  color: #7b8794;
   font-family: 'Roboto';
-  color: #9aa5b1;
+  font-size: 14px;
   font-weight: 500;
-  font-size: 16px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #dfe2e5;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 4px;
   background-color: transparent;
   outline: none;
   border: none;
   cursor: pointer;
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
   .tab-btn {
-    font-size: 24px;
+    font-size: 16px;
+    padding-left: 26px;
+    padding-right: 26px;
+    padding-bottom: 8px;
   }
 }
 .active-tab-btn {
-  border-bottom: 2px solid #2563eb;
   color: #2563eb;
+  border-bottom: 2px solid #2563eb;
+  padding-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .active-tab-btn {
+    padding-bottom: 12px;
+  }
 }
